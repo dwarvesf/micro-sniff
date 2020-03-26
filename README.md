@@ -2,7 +2,7 @@
 	<img width="200" height="200" margin-right="100%" src="misc/icon.png">
 </p>
 <p align="center">
-<a href="https://github.com/dwarvesf/hidden/releases/latest">
+<a href="https://github.com/dwarvesf/Micro-Sniff/releases/latest">
  		<img src="https://img.shields.io/badge/download-latest-brightgreen.svg" alt="download">
 	<a href="https://img.shields.io/badge/platform-macOS-lightgrey.svg">
  		<img src="https://img.shields.io/badge/platform-macOS-lightgrey.svg" alt="platform">
