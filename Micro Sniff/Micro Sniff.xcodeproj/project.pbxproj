@@ -13,8 +13,6 @@
 		0837EB98240A1F5B0092C830 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0837EB96240A1F5B0092C830 /* Main.storyboard */; };
 		0837EBA0240A1FBD0092C830 /* LauncherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0837EB9F240A1FBD0092C830 /* LauncherManager.swift */; };
 		0837EBA1240A1FBD0092C830 /* LauncherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0837EB9F240A1FBD0092C830 /* LauncherManager.swift */; };
-		0837EBA3240A227C0092C830 /* Micro Sniff Launcher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0837EB8E240A1F570092C830 /* Micro Sniff Launcher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		0837EBA6240A229C0092C830 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0837EBA5240A229C0092C830 /* ServiceManagement.framework */; };
 		0851749623FAECFA00B3B84F /* MicroWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550151D723FA41D5007D6568 /* MicroWindow.swift */; };
 		086553602408DD8500715BEB /* Preferences in Frameworks */ = {isa = PBXBuildFile; productRef = 0865535F2408DD8500715BEB /* Preferences */; };
 		086553642408DE6600715BEB /* Preferences+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086553632408DE6600715BEB /* Preferences+Extension.swift */; };
@@ -23,6 +21,8 @@
 		0865536E2408E03500715BEB /* AboutPreferenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0865536D2408E03500715BEB /* AboutPreferenceViewController.xib */; };
 		086553702408E14000715BEB /* HyperlinkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0865536F2408E14000715BEB /* HyperlinkTextField.swift */; };
 		0879E9C424065A06007890BC /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0879E9C324065A06007890BC /* Util.swift */; };
+		0891D8F7242CC0EB00F43B38 /* Micro Sniff Launcher.app in Copy Files */ = {isa = PBXBuildFile; fileRef = 0837EB8E240A1F570092C830 /* Micro Sniff Launcher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0891D8F8242CC44000F43B38 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0837EBA5240A229C0092C830 /* ServiceManagement.framework */; };
 		08A8B80F23FA7F13009C541C /* MicroManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A8B80E23FA7F13009C541C /* MicroManager.swift */; };
 		08A8B82F23FA8100009C541C /* AudioObjectPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A8B81623FA8100009C541C /* AudioObjectPool.swift */; };
 		08A8B83023FA8100009C541C /* Bool+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A8B81823FA8100009C541C /* Bool+Extensions.swift */; };
@@ -43,7 +43,6 @@
 		08A8B83F23FA8100009C541C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A8B82B23FA8100009C541C /* Event.swift */; };
 		08A8B84023FA8100009C541C /* EventSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A8B82C23FA8100009C541C /* EventSubscriber.swift */; };
 		08A8B84123FA8100009C541C /* AudioStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A8B82D23FA8100009C541C /* AudioStream.swift */; };
-		08A8B84223FA8100009C541C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08A8B82E23FA8100009C541C /* Info.plist */; };
 		08A8B84423FA863A009C541C /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A8B84323FA863A009C541C /* StatusBarController.swift */; };
 		08B509072409921600F4FB4F /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B509062409921600F4FB4F /* Bundle+Extension.swift */; };
 		08B5090924099A8F00F4FB4F /* UserDefault+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B5090824099A8F00F4FB4F /* UserDefault+Extension.swift */; };
@@ -54,14 +53,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		0837EBA2240A226C0092C830 /* CopyFiles */ = {
+		0837EBA2240A226C0092C830 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 1;
 			files = (
-				0837EBA3240A227C0092C830 /* Micro Sniff Launcher.app in CopyFiles */,
+				0891D8F7242CC0EB00F43B38 /* Micro Sniff Launcher.app in Copy Files */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -130,7 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				086553602408DD8500715BEB /* Preferences in Frameworks */,
-				0837EBA6240A229C0092C830 /* ServiceManagement.framework in Frameworks */,
+				0891D8F8242CC44000F43B38 /* ServiceManagement.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +362,7 @@
 				550151CE23FA41D5007D6568 /* Sources */,
 				550151CF23FA41D5007D6568 /* Frameworks */,
 				550151D023FA41D5007D6568 /* Resources */,
-				0837EBA2240A226C0092C830 /* CopyFiles */,
+				0837EBA2240A226C0092C830 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -434,7 +434,6 @@
 				0865536E2408E03500715BEB /* AboutPreferenceViewController.xib in Resources */,
 				08D25B9B2408EA64002DD16B /* GeneralPreferenceViewController.xib in Resources */,
 				550151DD23FA41D7007D6568 /* Main.storyboard in Resources */,
-				08A8B84223FA8100009C541C /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,7 +524,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = foundation.dwarves.microsniff.launcher;
+				PRODUCT_BUNDLE_IDENTIFIER = foundation.dwarves.microsnifflauncher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -546,7 +545,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = foundation.dwarves.microsniff.launcher;
+				PRODUCT_BUNDLE_IDENTIFIER = foundation.dwarves.microsnifflauncher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;

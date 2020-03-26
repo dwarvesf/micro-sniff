@@ -13,10 +13,10 @@ import ServiceManagement
 class LauncherManager {
     static let shared = LauncherManager()
     
-    private let mainAppID = "foundation.dwarves.MicMonitor"
-    private let launcherAppID = "foundation.dwarves.MicMonitorLauncher"
+    private let mainAppID = "foundation.dwarves.microsniff"
+    private let launcherAppID = "foundation.dwarves.microsnifflauncher"
     
-    private let appName = "MicMonitor"
+    private let appName = "Micro Sniff"
     private let killLaunchNtfName = Notification.Name("killLauncher")
     
     private init() {}
