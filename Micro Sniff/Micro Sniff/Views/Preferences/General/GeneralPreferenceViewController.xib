@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="GeneralPreferenceViewController" customModule="MicMonitor" customModuleProvider="target">
+            <connections>
+                <outlet property="checkboxKeepIconInDock" destination="eVh-Mm-0g0" id="S9b-Yg-3yr"/>
+                <outlet property="checkboxShowPreferencesOnLaunch" destination="yTT-zQ-e5q" id="sEy-J5-E0U"/>
+                <outlet property="checkboxStartAtLogin" destination="GvI-Om-HDr" id="t4U-PS-IpH"/>
+                <outlet property="view" destination="0Zx-QX-MJo" id="93E-Wn-yS9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <view wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Zx-QX-MJo">
+            <rect key="frame" x="0.0" y="0.0" width="470" height="177"/>
+            <subviews>
+                <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0n4-q2-b0q">
+                    <rect key="frame" x="219" y="58" width="191" height="62"/>
+                    <subviews>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GvI-Om-HDr">
+                            <rect key="frame" x="-2" y="46" width="170" height="18"/>
+                            <buttonCell key="cell" type="check" title="Start Micro Sniff at login" bezelStyle="regularSquare" imagePosition="left" inset="2" id="bf5-e5-tnZ">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="toggleStartAtLogin:" target="-2" id="fhL-tJ-NCD"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yTT-zQ-e5q">
+                            <rect key="frame" x="-2" y="22" width="194" height="18"/>
+                            <buttonCell key="cell" type="check" title="Show preferences on launch" bezelStyle="regularSquare" imagePosition="left" inset="2" id="9pC-z6-4yp">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="toggleShowPreferencesOnLaunch:" target="-2" id="kqs-t7-mxo"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eVh-Mm-0g0">
+                            <rect key="frame" x="-2" y="-2" width="130" height="18"/>
+                            <buttonCell key="cell" type="check" title="Keep icon in dock" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ymJ-QM-wIJ">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="toggleKeepIconInDock:" target="-2" id="zjN-ZB-LcL"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yhD-2X-r8G">
+                    <rect key="frame" x="0.0" y="0.0" width="159" height="177"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="159" id="Rp2-qQ-QOW"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="img_background" id="Scr-dy-XQj"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="yhD-2X-r8G" firstAttribute="leading" secondItem="0Zx-QX-MJo" secondAttribute="leading" id="2VR-iP-I2P"/>
+                <constraint firstItem="0n4-q2-b0q" firstAttribute="leading" secondItem="yhD-2X-r8G" secondAttribute="trailing" constant="60" id="Fj6-Zw-cDv"/>
+                <constraint firstItem="0n4-q2-b0q" firstAttribute="centerY" secondItem="0Zx-QX-MJo" secondAttribute="centerY" id="MKe-Bt-odM"/>
+                <constraint firstItem="yhD-2X-r8G" firstAttribute="top" secondItem="0Zx-QX-MJo" secondAttribute="top" id="VGL-Nh-nq7"/>
+                <constraint firstAttribute="trailing" secondItem="0n4-q2-b0q" secondAttribute="trailing" constant="60" id="k6F-sJ-6A1"/>
+                <constraint firstAttribute="bottom" secondItem="yhD-2X-r8G" secondAttribute="bottom" id="lAg-4v-uyw"/>
+            </constraints>
+            <point key="canvasLocation" x="-191" y="148.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img_background" width="159" height="176"/>
+    </resources>
+</document>
