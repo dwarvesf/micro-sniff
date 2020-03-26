@@ -16,6 +16,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         LauncherManager.shared.setupMainApp(isAutoStart: Preference.startAtLogin)
         
+        registerDefaultValues()
+        
         Util.toggleDockIcon(Preference.dockIconState)
 
         if Preference.showPreferencesOnlaunch {
@@ -26,6 +28,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationWillTerminate(_ aNotification: Notification) {
         
+    }
+    
+    func registerDefaultValues() {
+        UserDefaults.standard.register(defaults: [
+            UserDefaults.Key.dockIconState: DockIconState.hide.rawValue,
+            UserDefaults.Key.startAtLogin: false,
+            UserDefaults.Key.showPreferencesOnLaunch: true
+        ])
     }
 
 

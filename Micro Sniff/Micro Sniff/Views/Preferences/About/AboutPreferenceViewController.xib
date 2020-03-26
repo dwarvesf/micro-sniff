@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="AboutPreferenceViewController" customModule="MicMonitor" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="AboutPreferenceViewController" customModule="Micro_Sniff" customModuleProvider="target">
             <connections>
                 <outlet property="lblVersion" destination="bDY-6Y-ceg" id="HM4-Fy-mFd"/>
                 <outlet property="view" destination="pYi-Q9-w6v" id="tGi-vy-2AJ"/>
@@ -82,7 +82,7 @@
                                                     </constraints>
                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="ico_compass" id="X3S-62-WQx"/>
                                                 </imageView>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0qR-hm-Vg0" customClass="HyperlinkTextField" customModule="MicMonitor" customModuleProvider="target">
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0qR-hm-Vg0" customClass="HyperlinkTextField" customModule="Micro_Sniff" customModuleProvider="target">
                                                     <rect key="frame" x="28" y="0.0" width="131" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Know more about us" id="Qn5-TI-1PJ">
                                                         <font key="font" metaFont="systemMedium" size="13"/>
@@ -114,7 +114,7 @@
                                                     </constraints>
                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="ico_twitter" id="rrQ-PI-ht9"/>
                                                 </imageView>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4vn-ww-rfy" customClass="HyperlinkTextField" customModule="MicMonitor" customModuleProvider="target">
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4vn-ww-rfy" customClass="HyperlinkTextField" customModule="Micro_Sniff" customModuleProvider="target">
                                                     <rect key="frame" x="28" y="0.0" width="128" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Follow us on Twitter" id="buj-pn-TOt">
                                                         <font key="font" metaFont="systemMedium" size="13"/>
@@ -146,7 +146,7 @@
                                                     </constraints>
                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="ico_github" id="aXT-sL-QXu"/>
                                                 </imageView>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bak-zf-taJ" customClass="HyperlinkTextField" customModule="MicMonitor" customModuleProvider="target">
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bak-zf-taJ" customClass="HyperlinkTextField" customModule="Micro_Sniff" customModuleProvider="target">
                                                     <rect key="frame" x="28" y="0.0" width="182" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="This app is fully open source" id="iT7-kk-9G1">
                                                         <font key="font" metaFont="systemMedium" size="13"/>
@@ -154,7 +154,7 @@
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="href" value="https://github.com/dwarvesf/MicMonitor"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="href" value="https://github.com/dwarvesf/Micro-Sniff"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
@@ -178,7 +178,7 @@
                                                     </constraints>
                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="ico_email" id="u8O-Nd-uuB"/>
                                                 </imageView>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BiI-Wf-wiY" customClass="HyperlinkTextField" customModule="MicMonitor" customModuleProvider="target">
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BiI-Wf-wiY" customClass="HyperlinkTextField" customModule="Micro_Sniff" customModuleProvider="target">
                                                     <rect key="frame" x="28" y="0.0" width="56" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Email us" id="g1L-5E-iF0">
                                                         <font key="font" metaFont="systemMedium" size="13"/>
