@@ -41,7 +41,7 @@ The Micro Sniff is notarized before distributed out side App Store. It's safe to
 - When there is any micro device using, this overlay will appear
 
 <p align="center">
-    <img width="600" src="misc/overlay.png">
+    <img width="600" src="misc/screenshot.png">
 </p>
 
 ## ✨<a href="https://github.com/dwarvesf/Micro-Sniff/graphs/contributors">Contributors</a>
