@@ -672,6 +672,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Micro Sniff/MicroSniff.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = W777S7V8TN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Micro Sniff/Info.plist";
@@ -693,6 +694,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Micro Sniff/MicroSniff.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = W777S7V8TN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Micro Sniff/Info.plist";

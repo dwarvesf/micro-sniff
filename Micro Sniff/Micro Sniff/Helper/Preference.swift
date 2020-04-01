@@ -35,7 +35,6 @@ enum Preference {
     
     static var startAtLogin: Bool {
         get {
-            UserDefaults.standard.register(defaults: [UserDefaults.Key.startAtLogin: true])
             return UserDefaults.standard.bool(forKey: UserDefaults.Key.startAtLogin)
         }
         
@@ -47,7 +46,6 @@ enum Preference {
     
     static var showPreferencesOnlaunch: Bool {
         get {
-            UserDefaults.standard.register(defaults: [UserDefaults.Key.showPreferencesOnLaunch: true])
             return UserDefaults.standard.bool(forKey: UserDefaults.Key.showPreferencesOnLaunch)
         }
         

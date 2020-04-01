@@ -23,7 +23,8 @@ This application using to monitor your Mac microphone activities.
 ## 🚀 Install
 
 ###  App Store
-In progress ⏳
+
+[![AppStore](misc/appstore.svg)](https://apps.apple.com/us/app/micro-sniff/id1504024265?l=vi&ls=1)
 
 ### Others
 
@@ -54,6 +55,10 @@ Please read [this](CONTRIBUTING.md) before you make a contribution.
 
 ## Requirements
 macOS version >= 10.12
+
+## You may also like
+- [Hidden Bar](https://github.com/dwarvesf/hidden) - An ultra-light MacOS utility that helps hide menu bar icons
+- [Blurred](https://github.com/dwarvesf/blurred) - A macOS utility that helps reduce distraction by dimming your inactive noise
 
 ## License
 
