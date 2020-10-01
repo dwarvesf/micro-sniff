@@ -83,13 +83,15 @@ class MicroWindow: NSWindow {
             micTitleLabel.bottomAnchor.constraint(equalTo: visualEffect.bottomAnchor, constant: -10),
             micTitleLabel.widthAnchor.constraint(equalToConstant: microViewWidth)
         ])
-        
+        overlayWindow.windowController?.shouldCascadeWindows = false
+        overlayWindow.setFrameAutosaveName("MicroSniff")
         return overlayWindow
     }
     
     func openWithAnimation() {
         self.makeKeyAndOrderFront(nil)
         self.alphaValue = 0
+        self.relocationToNearestEdge(lastLocationInScreen: self.frame.origin)
         NSAnimationContext.runAnimationGroup({ _ in
             NSAnimationContext.current.duration = 0.5
             self.animator().alphaValue = 1
