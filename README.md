@@ -17,7 +17,7 @@
 
 ## Micro Sniff
 
-This application using to monitor your Mac microphone activities.
+This application allows you to monitor your Mac's microphone activity.
 
 <p align="center">
 	<img width="600" src="misc/guide.gif">
