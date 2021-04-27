@@ -20,6 +20,10 @@ final class GeneralPreferenceViewController: NSViewController, PreferencePane {
     @IBOutlet weak var checkboxKeepIconInDock: NSButton!
     @IBOutlet weak var checkboxShowPreferencesOnLaunch: NSButton!
     
+    @IBOutlet weak var checkboxEnableNotification: NSButton!
+    
+    @IBOutlet weak var checkBoxEnableNotificationSound: NSButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +34,7 @@ final class GeneralPreferenceViewController: NSViewController, PreferencePane {
         checkboxStartAtLogin.state = Preference.startAtLogin ? .on : .off
         checkboxKeepIconInDock.state = Preference.dockIconState ==  .show ? .on : .off
         checkboxShowPreferencesOnLaunch.state = Preference.showPreferencesOnlaunch ? .on : .off
+        checkboxEnableNotification.state = Preference.isShowNotification ? .on : .off
     }
     
     @IBAction func toggleStartAtLogin(_ sender: NSButton) {
@@ -64,4 +69,12 @@ final class GeneralPreferenceViewController: NSViewController, PreferencePane {
             break
         }
     }
+    
+    @IBAction func toggleEnableNotification(_ sender: NSButton) {
+        Preference.isShowNotification = sender.state == .on
+    }
+    @IBAction func toggleEnableNotificationSound(_ sender: NSButton) {
+        Preference.isEnableNotificationSound = sender.state == .on
+    }
+    
 }

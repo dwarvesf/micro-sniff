@@ -37,13 +37,21 @@ class StatusBarController {
         if let mic = AudioDevice.allInputDevices().first(where: {$0.isRunningSomewhere()}) {
             createAndShowWindow(micTitle: mic.name)
         }
-        
+
         MicroManager.sharedInstance.microDidRunningSomeWhere = {[weak self] (isRunning, title) in
+            NotificationManager.showNotificationIfEnable(title: title, desc: "\(title) \(isRunning ? "running" : "stopped")")
             if isRunning {
                 self?.createAndShowWindow(micTitle: title)
             } else {
                 self?.removeWindow()
             }
+        }
+        
+        MicroManager.sharedInstance.microDidAdd = {deviceName in
+            NotificationManager.showNotificationIfEnable(title: deviceName, desc: "\(deviceName) connected")
+        }
+        MicroManager.sharedInstance.microDidRemove = {deviceName in
+            NotificationManager.showNotificationIfEnable(title: deviceName, desc: "\(deviceName) disconnected")
         }
     }
     

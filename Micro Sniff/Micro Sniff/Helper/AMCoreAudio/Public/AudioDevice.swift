@@ -211,7 +211,9 @@ public final class AudioDevice: AudioObject {
     public class func allInputDevices() -> [AudioDevice] {
         return allDevices().filter { $0.channels(direction: .recording) > 0 }
     }
-
+    public func isMicroDevice() -> Bool {
+        channels(direction: .recording) > 0
+    }
     /// All the devices in the system that have at least one output.
     ///
     /// - Note: The list may also include *Aggregate* and *Multi-Output* devices.
