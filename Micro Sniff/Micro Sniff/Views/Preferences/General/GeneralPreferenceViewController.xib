@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="GeneralPreferenceViewController" customModule="MicMonitor" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="GeneralPreferenceViewController" customModule="Micro_Sniff" customModuleProvider="target">
             <connections>
+                <outlet property="checkBoxEnableNotificationSound" destination="MbV-iT-K0X" id="mo5-d3-Qja"/>
+                <outlet property="checkboxEnableNotification" destination="AVW-S5-pqK" id="t2u-2O-jVl"/>
                 <outlet property="checkboxKeepIconInDock" destination="eVh-Mm-0g0" id="S9b-Yg-3yr"/>
                 <outlet property="checkboxShowPreferencesOnLaunch" destination="yTT-zQ-e5q" id="sEy-J5-E0U"/>
                 <outlet property="checkboxStartAtLogin" destination="GvI-Om-HDr" id="t4U-PS-IpH"/>
@@ -17,13 +19,13 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <view wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Zx-QX-MJo">
-            <rect key="frame" x="0.0" y="0.0" width="470" height="177"/>
+            <rect key="frame" x="0.0" y="0.0" width="475" height="177"/>
             <subviews>
                 <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0n4-q2-b0q">
-                    <rect key="frame" x="219" y="58" width="191" height="62"/>
+                    <rect key="frame" x="219" y="29" width="196" height="120"/>
                     <subviews>
                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GvI-Om-HDr">
-                            <rect key="frame" x="-2" y="46" width="170" height="18"/>
+                            <rect key="frame" x="-2" y="103" width="174" height="18"/>
                             <buttonCell key="cell" type="check" title="Start Micro Sniff at login" bezelStyle="regularSquare" imagePosition="left" inset="2" id="bf5-e5-tnZ">
                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                 <font key="font" metaFont="system"/>
@@ -33,7 +35,7 @@
                             </connections>
                         </button>
                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yTT-zQ-e5q">
-                            <rect key="frame" x="-2" y="22" width="194" height="18"/>
+                            <rect key="frame" x="-2" y="77" width="198" height="18"/>
                             <buttonCell key="cell" type="check" title="Show preferences on launch" bezelStyle="regularSquare" imagePosition="left" inset="2" id="9pC-z6-4yp">
                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                 <font key="font" metaFont="system"/>
@@ -43,7 +45,7 @@
                             </connections>
                         </button>
                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eVh-Mm-0g0">
-                            <rect key="frame" x="-2" y="-2" width="130" height="18"/>
+                            <rect key="frame" x="-2" y="51" width="134" height="18"/>
                             <buttonCell key="cell" type="check" title="Keep icon in dock" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ymJ-QM-wIJ">
                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                 <font key="font" metaFont="system"/>
@@ -52,13 +54,37 @@
                                 <action selector="toggleKeepIconInDock:" target="-2" id="zjN-ZB-LcL"/>
                             </connections>
                         </button>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AVW-S5-pqK">
+                            <rect key="frame" x="-2" y="25" width="139" height="18"/>
+                            <buttonCell key="cell" type="check" title="Enable notification" bezelStyle="regularSquare" imagePosition="left" inset="2" id="9f9-rr-bYS">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="toggleEnableNotification:" target="-2" id="KdM-d7-zpa"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MbV-iT-K0X">
+                            <rect key="frame" x="-2" y="-1" width="180" height="18"/>
+                            <buttonCell key="cell" type="check" title="Enable notification sound" bezelStyle="regularSquare" imagePosition="left" inset="2" id="bnV-9C-q5P">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="toggleEnableNotificationSound:" target="-2" id="1CJ-Li-g8B"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <visibilityPriorities>
                         <integer value="1000"/>
                         <integer value="1000"/>
                         <integer value="1000"/>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
                     </visibilityPriorities>
                     <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
                         <real value="3.4028234663852886e+38"/>
                         <real value="3.4028234663852886e+38"/>
                         <real value="3.4028234663852886e+38"/>

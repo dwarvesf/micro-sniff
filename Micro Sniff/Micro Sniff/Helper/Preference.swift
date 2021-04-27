@@ -13,6 +13,8 @@ extension UserDefaults {
         static let startAtLogin = "startAtLogin"
         static let dockIconState = "dockIconState"
         static let showPreferencesOnLaunch = "showPreferencesOnLaunch"
+        static let isEnableNotificationSound = "isEnableNotificationSound"
+        static let isShowNotification = "isShowNotification"
     }
 }
 
@@ -41,6 +43,26 @@ enum Preference {
         set {
             UserDefaults.standard.set(newValue, forKey: UserDefaults.Key.startAtLogin)
             LauncherManager.shared.setupMainApp(isAutoStart: newValue)
+        }
+    }
+    
+    static var isShowNotification: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: UserDefaults.Key.isShowNotification)
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: UserDefaults.Key.isShowNotification)
+        }
+    }
+    
+    static var isEnableNotificationSound: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: UserDefaults.Key.isEnableNotificationSound)
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: UserDefaults.Key.isEnableNotificationSound)
         }
     }
     

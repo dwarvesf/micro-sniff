@@ -14,6 +14,8 @@ class MicroManager {
     private init(){}
     
     var microDidRunningSomeWhere: ((_ isRunning: Bool,_ title: String) -> ())?
+    var microDidAdd:((_ title: String) ->())?
+    var microDidRemove:((_ title: String) ->())?
     
 
     func regisAudioNotification() {
@@ -29,19 +31,33 @@ class MicroManager {
 }
 extension MicroManager: EventSubscriber {
     func eventReceiver(_ event: Event) {
-        guard let event = event as?  AudioDeviceEvent else { return }
+        if let event = event as?  AudioDeviceEvent {
+            switch event {
+                case .isRunningSomewhereDidChange(audioDevice: let audioDevice):
+                    guard
+                        audioDevice.isInputOnlyDevice(),
+                        let microDidRunningSomeWhere = self.microDidRunningSomeWhere
+                    else {return}
+                    microDidRunningSomeWhere(audioDevice.isRunningSomewhere(), audioDevice.name)
+                default: break
+
+            }
+        }
         
-        switch event {
-        
-        case .isRunningSomewhereDidChange(audioDevice: let audioDevice):
-            guard
-                audioDevice.isInputOnlyDevice(),
-                let microDidRunningSomeWhere = self.microDidRunningSomeWhere
-                else {return}
-            
-            microDidRunningSomeWhere(audioDevice.isRunningSomewhere(), audioDevice.name)
-        
-        default: break
+        if let event = event as? AudioHardwareEvent {
+            switch event {
+                case .deviceListChanged(addedDevices: let addedDevices, removedDevices: let removedDevices):
+                    
+                    if let microDidAdd = self.microDidAdd, let addedMic = addedDevices.first(where: {$0.isMicroDevice()}) {
+                        microDidAdd(addedMic.name)
+                    }
+                    
+                    if let microDidRemove = microDidRemove, let removedMic = removedDevices.first(where: {$0.isMicroDevice()}) {
+                        microDidRemove(removedMic.name)
+                    }
+                    
+                default: break
+            }
         }
     }
     

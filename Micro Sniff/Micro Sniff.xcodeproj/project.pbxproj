@@ -50,6 +50,7 @@
 		550151D623FA41D5007D6568 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550151D523FA41D5007D6568 /* AppDelegate.swift */; };
 		550151DA23FA41D7007D6568 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 550151D923FA41D7007D6568 /* Assets.xcassets */; };
 		550151DD23FA41D7007D6568 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 550151DB23FA41D7007D6568 /* Main.storyboard */; };
+		55ACE6182633C2560081883B /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55ACE6172633C2560081883B /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -115,6 +116,7 @@
 		550151DC23FA41D7007D6568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		550151DE23FA41D7007D6568 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		550151DF23FA41D7007D6568 /* MicroSniff.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MicroSniff.entitlements; sourceTree = "<group>"; };
+		55ACE6172633C2560081883B /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,6 +297,7 @@
 				0879E9C324065A06007890BC /* Util.swift */,
 				08A8B81323FA8100009C541C /* AMCoreAudio */,
 				0837EB8824099C980092C830 /* Preference.swift */,
+				55ACE6172633C2560081883B /* NotificationManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				08A8B83A23FA8100009C541C /* AudioHardwareEvent.swift in Sources */,
 				08A8B83E23FA8100009C541C /* BundleInfo.swift in Sources */,
 				08A8B83123FA8100009C541C /* AudioObject+Helpers.swift in Sources */,
+				55ACE6182633C2560081883B /* NotificationManager.swift in Sources */,
 				08B509072409921600F4FB4F /* Bundle+Extension.swift in Sources */,
 				086553682408DEA000715BEB /* GeneralPreferenceViewController.swift in Sources */,
 				08A8B84423FA863A009C541C /* StatusBarController.swift in Sources */,
